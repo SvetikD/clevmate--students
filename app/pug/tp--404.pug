@@ -1,0 +1,15 @@
+extends ./includes/tmpl.pug
+
+block main
+    include ./includes/lk--menu.pug 
+
+    
+    main.lk-main.tp-main.tp-404
+        div.lk-conetnt
+            div.container.pb-4 
+                div.row.mt-4
+                    div.col-12
+                        h1 Ошибка 404
+                        h3 Страницы с&nbsp;таким адресом не&nbsp;существует.<br /> Вернись на&nbsp;<a href="/" class="link">главную страницу</a> 
+
+        include ./includes/lk--footer.pug                       

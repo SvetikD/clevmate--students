@@ -1,0 +1,25 @@
+extends ./includes/tmpl.pug
+
+block main
+    include ./includes/lk--menu.pug 
+
+    
+    main.lk-main.tp-main.tp-payment 
+        div.lk-conetnt
+            div.container.pb-4 
+                div.row.mt-4
+                    div.col-12.col-lg-6.offset-lg-3  
+                        div.h4 Оплата доступа к платформе по тарифу
+                        div.h1.mb-6 «Базовый, 9 месяцев»
+
+                        //- div.form-group 
+                        //-     label.label Электронная почта 
+                        //-     input.form-control(type="text").is-invalid
+                        //-     div.invalid-feedback Неверный формат почты
+
+                        div.tp-payment__container.mb-6 
+                            | сюда идет модуль оплаты
+
+                        a(href="#").btn.btn-secondary Отменить и вернуться назад  
+
+        include ./includes/lk--footer.pug   

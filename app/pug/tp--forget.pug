@@ -1,0 +1,28 @@
+
+extends ./includes/tmpl.pug
+
+block header 
+    include ./includes/tp--header.pug 
+
+block main
+
+    main.tp-main.tp-login 
+        div.container.pb-6.pt-3
+            div.row 
+                div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2.col-lg-6.offset-lg-3   
+                    div.p-4.p-lg-6.bg-white.border.border-dashed   
+                        h1 Забыли пароль?
+                        p.mb-5 Введите email      
+                        div#loginForm
+                            form.form-horizontal(action='/Account/Login' method='post' role='form' novalidate='novalidate')
+                                input(name='__RequestVerificationToken' type='hidden' value='Rp5L9kxhvcNFbOpHJuu6cDqF3TvAfU3R492d5uMxqVu-jgL_3yrm0M0QwMdk9-WiUweUaMFnJ2KgGLfLYY_kCPufmN0Uho6KaHyKEEFCVaQ1')
+                                
+                                div.form-group
+                                    label(for='Email').label Email
+                                    input#Email.form-control.valid(data-val='true' data-val-email='The Email field is not a valid e-mail address.' data-val-required='The Email field is required.' name='Email' type='text' value='' aria-describedby='Email-error' aria-invalid='false')
+                                    span.text-danger.field-validation-valid(data-valmsg-for='Email' data-valmsg-replace='true')
+
+                                // кнопка входа
+                                div.form-group.pt-0
+                                    button.btn.btn-primary(type='submit') 
+                                        span Отправить ссылку

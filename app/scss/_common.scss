@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: $Nunito;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.4em;
+    background-color: #fff;
+    min-width: 375px;
+
+    @media(min-width: $xl) {
+        font-size: 18px;
+        line-height: 1.4em;
+    }
+}
+
+.wrapper {
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.content-load {
+    flex-grow: 1;
+}
+
+mark {
+    // background-color: #FEFFC2;
+    background-color: #fff27e;
+}
+
+a {
+    color: inherit;  
+    text-decoration: none;
+    color: #000;
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+p a, 
+.link {
+    position: relative;
+    overflow: hidden;
+    color: #000;
+    text-decoration: none;
+    z-index: 1;
+    border-bottom: 1px dotted #000;
+    background: linear-gradient(180deg, #DCFF7D 0%, #A5FF8E 100%);
+    background-size: 100% 0;
+    background-position: top left;
+    transition: background-size 0.25s ease;
+    background-repeat: no-repeat;
+    box-decoration-break: slice;
+    &:hover {
+        border-bottom-color: transparent;
+        text-decoration: none;
+        color: #000;
+        background-size: 100% 100%;
+    }
+
+    &.img-popup {
+        display: inline-block;
+        background: #fff;
+        padding: 0.5em;
+        border-radius: 10px;
+        border-bottom: 0;
+        overflow: hidden;
+        img {
+            display: block;
+            max-width: 300px;
+        }
+    }
+}
+
+.img-popup {
+    display: inline-block;
+    background: #fff;
+    padding: 0.5em;
+    border-radius: 10px;
+    border-bottom: 0;
+    overflow: hidden;
+    img {
+        display: block;
+        max-width: 300px;
+    }
+}
+
+
+.i-tip {
+    margin-left: 8px;
+}
+
+// MAGNFIC POPUP -------------------------
+img.mfp-img {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.mfp-bg {
+    z-index: 1120;
+}
+.mfp-wrap {
+    z-index: 1125;
+}
+.mfp-img-bg {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.mfp-img-wrap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+.factoid {
+    @include text-14-16();
+    margin-bottom: 32px;
+
+    span {
+        display: block;
+        margin-bottom: 6px;
+        @include text-32-40();
+        
+    }
+
+    @media(min-width: $xl) {
+        margin-bottom: 40px;
+    }
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+    li {
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    a {
+        .bg-vk, 
+        .bg-youtube {
+            fill: #fff;
+            transition: fill 0.2s ease;
+        }
+
+        &:hover {
+            .bg-vk {
+                fill: #5181B8;
+            } 
+            .bg-youtube {
+                fill: #FF0000;
+            }
+        }
+    }
+}
+
+.loading {
+    background: linear-gradient(95.92deg, #B6A4FF 4.5%, #FF97F5 40.72%, #FFEF99 101.09%);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+    font-weight: bold;
+}
+
+.t-tag {
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 2em;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    color: rgba(#000, 0.6);
+}
+
+
+.btn-icon {
+    padding: 0.5em;
+    border-radius: 4px;
+    // background-color: rgba(#000,0.05);
+    img {
+        display: block;
+    }
+    &.dropdown-toggle {
+        &::after {
+            content: none;
+        }
+    }
+}
+
+.border-dashed {
+    border: 1px dashed #000;
+}
+
+.bg-1 {
+    background: linear-gradient(91.5deg, #E5BDFF -0.85%, #98F8FF 99.21%); 
+}
+.bg-2 {
+    background: linear-gradient(96.59deg, #FFB7F8 0.04%, #FFF4BC 99.76%);
+}
+.bg-3 {
+    background: linear-gradient(91.27deg, #AAFFD6 2.88%, #A8F5FF 99.79%);
+}
+.bg-4 {
+    background: linear-gradient(96.47deg, #FFD3BB 0.04%, #FFF9C8 101.04%);
+}
+
+.field-validation-valid {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #FF3B2F;
+}
+
+
+.ul-arrow {
+    li {
+        position: relative;
+        padding-left: 1.5em;
+        &::before {
+            content: '➜';
+            display: block;
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+

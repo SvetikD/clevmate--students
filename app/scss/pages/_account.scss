@@ -1,0 +1,53 @@
+
+
+.lk-plans__duration {
+    .btn-check:checked+.btn, .btn-check:active+.btn, .btn:active, .btn.active, .btn.show {
+        border: 1px solid #000;
+    }
+
+    .btn-check:checked+.btn+.btn-check + .btn:hover, 
+    .btn-check:active+.btn+ .btn-check + .btn:hover, 
+    .btn:active+ .btn-check + .btn:hover, 
+    .btn.active+ .btn-check + .btn:hover, 
+    .btn.show+ .btn-check + .btn:hover {
+        border-left: 1px solid #000;
+    }
+    
+    .btn {
+        border-color: transparent;
+        &:hover, &:focus {
+            border-color: transparent; 
+            @include btn-hover();
+            
+        }
+    }
+}
+
+.lk-plans__item {
+    border: 1px solid #000;
+    border-radius: 0;
+
+    .param {
+        margin-bottom: 0.65rem;
+        span {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    }
+
+    .card-header {
+        border-bottom: 1px dashed #000;
+    }
+
+    .infinity {
+        display: inline;
+        vertical-align: inherit;
+    }
+
+
+    .price {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: 1em 0;
+    }
+}

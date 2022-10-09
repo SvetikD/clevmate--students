@@ -1,0 +1,16 @@
+.lk-curtask {
+    .offcanvas-header {
+        border-bottom: 1px solid #000;   
+    }
+
+    .offcanvas-body {
+        padding-top: 0;
+    }
+}
+
+.lk-curtask__item {
+    border-bottom: 1px solid #000;
+    margin: 0 -16px;
+    padding: 1em 16px;
+    cursor: pointer;
+}

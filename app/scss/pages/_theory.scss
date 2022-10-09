@@ -1,0 +1,82 @@
+.lk-theory__list  {
+    margin: 0 -15px;
+    .col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    @media(min-width: $lg) {
+        .col {
+            width: 50%;
+        }
+    }
+}
+
+.lk-theory__heading {
+    background: linear-gradient(91.5deg, #E5BDFF -0.85%, #98F8FF 99.21%);
+    padding: 1.5em;
+    margin-bottom: 2em;    
+    border-radius: 10px;
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.lk-theory__item {
+    border: 1px solid #000;
+    padding: 1.5em;
+    border-radius: 10px;
+    header {
+        margin-bottom: 1.25em;
+        span {
+            text-transform: uppercase;
+            opacity: 0.6;
+            font-size: 12px;
+            line-height: 2em;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        display: block;
+        padding: 8px 0;
+        position: relative;
+        z-index: 1;
+        &:after {
+            content: "";
+            background: linear-gradient(90.93deg, #A5FF8E 8.62%, #DDFF7D 99.06%);
+            position: absolute;
+            left: -1.5em;
+            bottom: 0;
+            right: -1.5em;
+            height: 0;
+            z-index: -1;
+            transition: 0.35s ease;
+        }
+        &:hover {
+            border-bottom-color: transparent;
+            text-decoration: none;
+            color: #000;
+            &:after {
+                height: 100%;
+            }
+        }
+    }
+
+    span.locked {
+        display: block;
+        padding: 8px 0;
+        cursor: pointer;
+        opacity: 0.6;
+    }
+
+    &.locked  {
+        border-style: dashed;
+    }
+}

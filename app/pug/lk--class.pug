@@ -1,0 +1,139 @@
+extends ./includes/tmpl.pug
+
+block main
+    include ./includes/lk--menu.pug 
+
+    
+    main.lk-main
+        include ./includes/lk--header.pug   
+        div.lk-conetnt
+            div.container 
+                div.mb-7
+                    small.sup-h1.me-2 Класс 
+                    span.badge.bg-success Активный
+                    div.mb-2
+                        h1.d-inline.mb-0 11A, великие математики 
+                    p 
+                        span.my-1.me-4 Программа: «70-80 баллов»
+                        span.my-1.me-4 Учитель: Олег Денисович
+                        span.my-1.me-4 Дата окончания: 12.04.2022
+                        
+                ul.nav.nav-tabs(role='tablist')
+                    li.nav-item(role='presentation')
+                        button#studies-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#studies-tab-pane' type='button' role='tab' aria-controls='studies-tab-pane' aria-selected='true') Программа              
+                    li.nav-item(role='presentation')
+                        button#simulator-tab.nav-link(data-bs-toggle='tab' data-bs-target='#simulator-tab-pane' type='button' role='tab' aria-controls='simulator-tab-pane' aria-selected='false') Тренажёр
+                    li.nav-item(role='presentation')
+                        button#chat-tab.nav-link(data-bs-toggle='tab' data-bs-target='#chat-tab-pane' type='button' role='tab' aria-controls='chat-tab-pane' aria-selected='false') Сообщения учителю                      
+                    li.nav-item(role='presentation')
+                        button#students-tab.nav-link(data-bs-toggle='tab' data-bs-target='#students-tab-pane' type='button' role='tab' aria-controls='students-tab-pane' aria-selected='false') Рейтинг класса
+
+                div.tab-content
+                    // Сообщения учителю
+                    #chat-tab-pane.tab-pane.fade.pt-4(role='tabpanel' aria-labelledby='chat-tab' tabindex='0')
+                        div.row 
+                            div.col-lg-5.pe-lg-6.pt-lg-2
+                                // форма
+                                div.cb-message-form.p-3
+                                    div.form-group.pt-lg-2 
+                                        label.label Текст сообщения
+                                        textarea.form-control(rows="3", placeholder="Текст сообщения") 
+                                    div.form-group.mb-0 
+                                        input#formFile.form-control(type='file')
+                                        div.form-text Не более 20 MB
+
+                                    div.files-list.mt-2
+                                        div.row.gx-2.align-items-center
+                                            div.col.text-truncate 
+                                                span some-file.pdf
+                                            di.col-auto
+                                                button.btn.btn-sm.btn-icon.btn-del.border-0.h-auto.p-1(type='button' data-bs-toggle="modal" data-bs-target="#student-delete")
+                                                    img(src="_Common/BaseMvcLogic/Images/icons/off.svg", alt="") 
+                                        div.row.gx-2.align-items-center
+                                            div.col.text-truncate 
+                                                span some-file-with-very-very-very-very-very-long-name.pdf
+                                            div.col-auto 
+                                                button.btn.btn-sm.btn-icon.btn-del.border-0.h-auto.p-1(type='button' data-bs-toggle="modal" data-bs-target="#student-delete")
+                                                    img(src="_Common/BaseMvcLogic/Images/icons/off.svg", alt="")
+
+                                    button.btn.btn-primary.mt-3 Отправить   
+                                    
+                            div.col-lg-7
+                                div.cb-message-table.mt-5.mt-lg-0
+                                    table.table
+                                        //- thead
+                                        //-     tr
+                                        //-         th(scope='col') Дата
+                                        //-         th(scope='col') Содержание
+                                        tbody
+                                            tr
+                                                td 
+                                                    small 29.08.2022 
+                                                    small.text-muted  16:03
+                                                td 
+                                                    p Дополнительная задача к теме "Вычисления и преобразования, простейшие уравнения, текстовые задачи". Посмотрите оформление.
+                                                    p 
+                                                        a(href="#") Пример оформлния.jpg
+                                            
+                                            tr
+                                                td 
+                                                    small 29.08.2022 
+                                                    small.text-muted 16:03
+                                                td 
+                                                    p Дополнительная задача к теме "Вычисления и преобразования, простейшие уравнения, текстовые задачи". Посмотрите оформление.
+                                                    p 
+                                                        a(href="#") Пример оформлния.jpg
+
+                                            tr
+                                                td 
+                                                    small 29.08.2022 
+                                                    small.text-muted 16:03
+                                                td 
+                                                    p Всем учиться!!!                                                       
+
+                                            tr
+                                                td 
+                                                    small 29.08.2022 
+                                                    small.text-muted 16:03
+                                                td 
+                                                    p Дополнительная задача к теме "Вычисления и преобразования, простейшие уравнения, текстовые задачи". Посмотрите оформление.
+                                                    p 
+                                                        a(href="#") Пример оформлния.jpg
+                                            
+                                            tr
+                                                td 
+                                                    small 29.08.2022 
+                                                    small.text-muted 16:03
+                                                td 
+                                                    p Дополнительная задача к теме "Вычисления и преобразования, простейшие уравнения, текстовые задачи". Посмотрите оформление.
+                                                    p 
+                                                        a(href="#") Пример оформлния.jpg
+
+                    // Ученики
+                    #students-tab-pane.tab-pane.fade.pt-4(role='tabpanel' aria-labelledby='students-tab' tabindex='0')
+                        p Рейтинг учеников на <b>12.09.2022</b>
+                        div.custom-table.lk-student-list
+                            div.table-header.d-none.d-lg-block 
+                                div.row.pt-2
+                                    div.mb-2.col-12.col-lg-1 Место
+                                    div.mb-2.col-12.col-lg-4 Имя
+                                    div.mb-2.col-12.col-lg-2 Жизни
+                                    div.mb-2.col-12.col-lg Баллы
+
+                            div.table-row
+                                div.row.pt-3                                        
+                                    div.mb-2.mb-lg-3.col-12.col-lg-1 
+                                        | <span class="d-lg-none">Место:</span> 1
+                                    div.mb-1.mb-lg-3.col-12.col-lg-4 Antuan Georg Leopold 
+                                    div.mb-2.col-4.col-lg-2 <span class="d-lg-none text-muted">Жизни:</span> 3
+                                    div.mb-3.col-4.col-lg <span class="d-lg-none text-muted">Баллы:</span> 12
+                            
+                            div.table-row
+                                div.row.pt-3                                        
+                                    div.mb-2.mb-lg-3.col-12.col-lg-1 
+                                        b <span class="d-lg-none">Место:</span> 2
+                                    div.mb-1.mb-lg-3.col-12.col-lg-4
+                                        b Antuan Georg Leopold 
+                                    div.mb-2.col-4.col-lg-2 <span class="d-lg-none text-muted">Жизни:</span> 3
+                                    div.mb-3.col-4.col-lg <span class="d-lg-none text-muted">Баллы:</span> 10
+        include ./includes/lk--footer.pug               

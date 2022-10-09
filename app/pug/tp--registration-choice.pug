@@ -1,0 +1,75 @@
+
+extends ./includes/tmpl.pug
+
+block header 
+    include ./includes/tp--header.pug 
+
+block main
+
+    main.tp-main.tp-login 
+        div.container.pb-6.pt-3
+            div.row 
+                div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2.col-lg-6.offset-lg-3   
+                    div.p-4.p-lg-6.bg-white.border.border-dashed   
+                        h1 Регистарция
+
+                        div#loginForm
+                            form.form-horizontal(action='/Account/Register' method='post' role='form')
+                                input(name='__RequestVerificationToken' type='hidden' value='tH_d7c1VzcpYXiGSSCeKZiRTdUYigSzXQIiA6zc0RIvHNkVypLfZFkj90Iu0VHTSPxLMhm30t1gR2deVJtZyxHw0_qDTn5IUXfkDeVBwA6s1')
+                            
+                                div.mb-5.mt-4
+                                    div.row
+                                        div.col-auto
+                                            div.form-check.mb-2
+                                                input#amStudent.form-check-input(data-val='true' data-val-required='Я ученик' name='studentOrTeacher' type='radio' value='student' checked)
+                                                label.form-check-label(for='amStudent') Я ученик
+                                        
+                                        div.col-auto
+                                            div.form-check.mb-2
+                                                input#amTeacher.form-check-input(data-val='true' data-val-required='Я учитель' name='studentOrTeacher' type='radio' value='teacher' )
+                                                label.form-check-label(for='amTeacher') Я учитель                                          
+                                      
+
+
+
+                                div.form-group
+                                    label(for='Name').label Имя
+                                    input#Name.form-control(data-val='true' data-val-length='The Имя must be at least 2 characters long.' data-val-length-max='20' data-val-length-min='2' data-val-required='The Имя field is required.' name='Name' type='text' value='')
+                                    span.field-validation-valid.text-danger(data-valmsg-for='Name' data-valmsg-replace='true')
+
+                                div.form-group
+                                    label(for='Email').label Email
+                                    input#Email.form-control(data-val='true' data-val-email='The Email field is not a valid e-mail address.' data-val-required='The Email field is required.' name='Email' type='text' value='')
+                                    span.field-validation-valid.text-danger(data-valmsg-for='Email' data-valmsg-replace='true')
+                                div.form-group
+                                    label.label(for='ClassId') 
+                                        | Придумайте ID класса 
+                                        img(src="_Common/BaseMvcLogic/Images/icons/tip.svg", alt="" data-toggle="tooltip" title="ID класса — это слово, по&nbsp;которому ваши ученики смогут регистри&#173;роваться у&nbsp;вас в&nbsp;виртуальном классе. Можно использовать буквы и&nbsp;цифры: a-z A-Z 0-9").i-tip
+                                    input#ClassId.form-control(name='ClassId' type='text' value='')
+                                    span.field-validation-valid.text-danger(data-valmsg-for='ClassId' data-valmsg-replace='true')      
+
+                                div.form-group
+                                    label.label(for='ClassId') 
+                                        | ID класса 
+                                        img(src="_Common/BaseMvcLogic/Images/icons/tip.svg", alt="" data-toggle="tooltip" title="Если твой учитель или репетитор пригласил тебя на платформу, введи в это поле ID класса").i-tip
+                                    input#ClassId.form-control(name='ClassId' type='text' value='')
+                                    span.field-validation-valid.text-danger(data-valmsg-for='ClassId' data-valmsg-replace='true')  
+
+
+                                div.form-group
+                                    label(for='Password').label Пароль
+                                    input#Password.form-control(data-val='true' data-val-length='The Пароль must be at least 6 characters long.' data-val-length-max='100' data-val-length-min='6' data-val-required='The Пароль field is required.' name='Password' type='password')
+                                    span.field-validation-valid.text-danger(data-valmsg-for='Password' data-valmsg-replace='true')
+                                div.form-group.form-group
+                                    label(for='ConfirmPassword').label Подтвердите пароль
+                                    input#ConfirmPassword.form-control(data-val='true' data-val-equalto='The password and confirmation password do not match.' data-val-equalto-other='*.Password' name='ConfirmPassword' type='password')
+                                    span.field-validation-valid.text-danger(data-valmsg-for='ConfirmPassword' data-valmsg-replace='true')
+                                
+                                div.form-group
+                                    // кнопка регистрации
+                                    button.btn.btn-primary(type='submit')#submit-btn 
+                                        span Зарегистрироваться
+
+                                    // меняется на лоудер    
+                                    div.btn.loading(style="display: none;")
+                                        span Создаём аккакунт... 

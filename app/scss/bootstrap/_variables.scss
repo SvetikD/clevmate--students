@@ -1,0 +1,149 @@
+// Bootstrap variables---------------------------------------------------------------------
+
+//Colors 
+
+$blue:    #007bff;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #FF3B2F;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #6CD13C;
+$teal:    #20c997;
+$cyan:    #17b5b8;
+
+
+// scss-docs-start theme-color-variables
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-900 !default;
+
+
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1250px
+);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1210px
+);
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12;
+$grid-gutter-width:           30px;
+$grid-row-columns:            6;
+
+
+
+$zindex-dropdown:                   1000;
+$zindex-sticky:                     1020;
+$zindex-fixed:                      1030;
+$zindex-offcanvas-backdrop:         1040;
+$zindex-offcanvas:                  1085;
+$zindex-modal-backdrop:             1050;
+$zindex-modal:                      1055;
+$zindex-popover:                    1070;
+$zindex-tooltip:                    1080;
+$zindex-toast:                      1090;
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg:              1.5;
+$line-height-sm:              1.5;
+
+$border-width:                1px;
+$border-color:                #000;
+
+$border-radius:               .25rem;
+$border-radius-lg:            .3rem;
+$border-radius-sm:            .2rem;
+
+$rounded-pill:                50rem;
+
+
+// Spacing
+//
+$spacer: 1rem;
+$spacers: ();
+
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 2),
+    6: ($spacer * 2.5),
+    7: ($spacer * 3),
+    8: ($spacer * 3.5)
+  ),
+  $spacers
+);
+
+
+$breadcrumb-divider: quote(">");
+
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         0.65rem;
+$input-btn-padding-x:         1.25rem;
+$input-btn-font-family:       null;
+// $input-btn-font-size:         $font-size-base;
+// $input-btn-line-height:       $line-height-base;
+
+$input-btn-focus-width:       .2rem;
+// $input-btn-focus-color:       rgba($component-active-bg, .25);
+// $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
+
+$input-btn-padding-y-sm:      .25rem;
+$input-btn-padding-x-sm:      .5rem;
+// $input-btn-font-size-sm:      $font-size-sm;
+// $input-btn-line-height-sm:    $line-height-sm;
+
+$input-btn-padding-y-lg:      0.75rem;
+$input-btn-padding-x-lg:      1.25rem;
+// $input-btn-font-size-lg:      $font-size-lg;
+// $input-btn-line-height-lg:    $line-height-lg;
+
+// $input-btn-border-width:      $border-width;
+
+
+
+$modal-fade-transform: scale(.8);
+$modal-backdrop-bg:  #000;
+$modal-backdrop-opacity:  .65;

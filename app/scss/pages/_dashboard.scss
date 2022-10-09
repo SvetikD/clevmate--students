@@ -1,0 +1,41 @@
+.tdb-card {
+    border: 1px solid #000;
+    border-radius: 0;
+
+    .card-header {
+        border-bottom: 1px dashed #000;
+        border-radius: 0;
+        background-color: transparent;
+        &:hover {
+            background: linear-gradient(95.92deg, #B6A4FF 4.5%, #FF97F5 40.72%, #FFEF99 101.09%);
+            background-size: 400% 400%;
+            animation: gradient 3s ease infinite;
+        }
+
+        small.badge {
+            font-size: 0.75rem;
+        }
+    }
+
+    .list-group-item {
+        border: 0;
+        border-bottom: 1px dashed rgba(#000,1);
+        color: #000;
+
+        &.list-group-item-action:hover {
+            background: linear-gradient(95.92deg, #B6A4FF 4.5%, #FF97F5 40.72%, #FFEF99 101.09%);
+            background-size: 400% 400%;
+            animation: gradient 3s ease infinite;
+        }
+
+        &:first-child,
+        &:last-child {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+}

@@ -1,0 +1,93 @@
+
+
+@mixin text-20-30 {
+    font-size: 20px;
+    line-height: 1.65em;
+    @media(min-width: $xl) {
+        font-size: 30px;
+    }
+}
+
+
+@mixin text-32-40 {
+    font-size: 32px;
+    line-height: 42px;
+    @media(min-width: $xl) {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@mixin text-14-16 {
+    font-size: 14px;
+    line-height: 1.5em;
+    @media(min-width: $xl) {
+        font-size: 16px;
+    }
+}
+
+@mixin h4 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+    @media(min-width: $xl) {
+        font-size: 24px;
+        line-height: 38px;
+    } 
+}
+
+@mixin factoid {
+    font-size: 40px;
+    line-height: 1.25em;
+    margin-bottom: 0.65em;
+    font-weight: bold;
+
+    @media(min-width: $md) {
+        font-size: 60px;
+    }
+
+    @media(min-width: $xl) {
+        font-size: 80px;
+    }
+}
+
+@mixin btn-hover {
+    background: linear-gradient(95.92deg, #B6A4FF 4.5%, #FF97F5 40.72%, #FFEF99 101.09%);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+}
+
+
+@keyframes bounce {
+    from { transform: translate3d(0, 0, 0);     }
+    to   { transform: translate3d(0, 10px, 0); }
+}
+
+  // animations ------------------------------
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes blink {
+
+    0% {
+      opacity: .1;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: .1;
+    }
+}

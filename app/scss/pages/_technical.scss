@@ -1,0 +1,89 @@
+.tp-main  {
+    width: 100%;
+    position: relative;
+    flex-grow: 1;
+    padding-top: 80px;
+    @media(min-width: $xl) {
+        padding-top: 120px;   
+    }
+}
+
+.tp-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    .container {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: inline-block;
+        font-size: 0;
+        line-height: 0;
+    }
+
+    @media(min-width: $xl) {
+        .container {
+            height: 120px;
+        }   
+    }
+}
+
+// tp--payment 
+.tp-payment {
+    background: linear-gradient(60.93deg, #A3FFD8 8.62%, #97FEE7 44.42%, #7DFFF7 99.06%);
+    
+}
+
+.tp-payment__container {
+    #payment-form {
+        margin: 0 auto;
+    }
+}
+
+
+.tp-login {
+    background: linear-gradient(119.54deg, #9B9FFF 2.69%, #6DFFF6 93.86%);
+}
+
+// tp--404 
+.tp-404 {
+    background: linear-gradient(119.54deg, #9B9FFF 2.69%, #6DFFF6 93.86%);
+    
+    h1, .h1 {
+        font-size: 56px;
+        text-indent: -0.05em;
+    }
+
+    @media(min-width: $lg) {
+        h1, .h1 {
+            font-size: 80px;
+        }
+    }
+}
+
+
+.modal-custom {
+    background: transparent;
+    border: 0;
+    position: relative;
+    z-index: 1;
+    .bg {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.75);
+    }
+
+    @media(min-width: $sm) {
+        .bg {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.lk-program__card,
+.lk-class__card,
+.lk-tmpl__card {
+    position: relative;
+    border: 1px solid #000;
+    border-radius: 0;
+
+    .card-header {
+        background-color: transparent;
+        border-bottom: 1px dashed #000;
+        border-radius: 0;
+        padding-right: 50px;
+    }
+
+    .card-footer {
+        background-color: transparent;
+        border-top: 1px dashed #000;
+    }
+
+    .btn-group {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+    }
+
+    .btn-icon {
+        background-color: #fff;
+    }
+
+    @media(min-width: $xl) {
+        .card-header {
+            padding-right: 60px;
+        }
+        .btn-group {
+            top: 6px;
+            right: 6px;
+        }
+    }
+}
+
+
+.lk-program__card,
+.lk-class__card,
+.lk-tmpl__card {
+    height: 100%;
+    a:hover .card-header {
+        background: linear-gradient(95.92deg, #B6A4FF 4.5%, #FF97F5 40.72%, #FFEF99 101.09%);
+        background-size: 400% 400%;
+        animation: gradient 3s ease infinite;
+    }
+}

@@ -1,0 +1,48 @@
+extends ./includes/tmpl.pug
+
+block main
+    include ./includes/lk--menu.pug 
+
+    
+    main.lk-main
+        div.lk-conetnt
+            div.container.py-5 
+                h2.mb-4 Список страниц админки учителя
+                ol.mb-6 
+                    li.mb-2 
+                        a(href="lk--dashboard.html") Дашборд ученика -- <small class="badge bg-success">можно брать</small>
+                    li.mb-2  
+                         a(href="lk--class.html") Класс -- в процессе
+                    //- li.mb-2  
+                    //-     a(href="lk--class--creating.html") Классы -- Создание нового класса (Шаг-1) -- <small class="badge bg-success">можно брать</small>
+                    //- li.mb-2  
+                    //-     a(href="lk--class--not-active.html") Классы -- Не активный (Шаг-2) -- <small class="badge bg-success">можно брать</small> 
+                    //- li.mb-2  
+                    //-     a(href="lk--class--active.html") Классы -- Aктивный (Шаг-3)  
+                    //- li.mb-2  
+                    //-     a(href="lk--program.html") Программы -- <small class="badge bg-success">можно брать</small>         
+                    //- li.mb-2  
+                    //-     a(href="lk--program--creating-step-1.html") Программы -- Создание (Шаг-1) -- <small class="badge bg-success">можно брать</small> 
+                    //- li.mb-2  
+                    //-     a(href="lk--program--creating-step-2.html") Программы -- Создание (Шаг-2) -- <small class="badge bg-success">можно брать</small>                                                                            
+                    //- li.mb-2  
+                    //-     a(href="lk--students.html") Ученики -- <small class="badge bg-success">можно брать</small>      
+                    li.mb-2  
+                        a(href="lk--account.html") Настройки аккаунта  -- <small class="badge bg-success">можно брать</small>
+
+                h2.mb-4 Техничкские страницы
+                ol 
+                    li.mb-2  
+                        a(href="tp--payment.html") Страница оплаты  -- <small class="badge bg-success">можно брать</small>
+                    li.mb-2  
+                        a(href="tp--404.html") Страница 404  -- <small class="badge bg-success">можно брать</small>      
+                    li.mb-2  
+                        a(href="tp--loading.html") Загрузка страницы  -- <small class="badge bg-success">можно брать</small>                                            
+                    li.mb-2  
+                        a(href="tp--login-choice.html") Логин  -- <small class="badge bg-success">можно брать</small>                                            
+                    li.mb-2  
+                        a(href="tp--registration-choice.html") Регистрация  -- <small class="badge bg-success">можно брать</small>                  
+                    li.mb-2  
+                        a(href="tp--forget.html") Забыли пароль  -- <small class="badge bg-success">можно брать</small>                  
+
+        include ./includes/lk--footer.pug   

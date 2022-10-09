@@ -1,0 +1,73 @@
+
+extends ./includes/tmpl.pug
+
+block header 
+    include ./includes/tp--header.pug 
+
+block main
+
+    main.tp-main.tp-login 
+        div.container.pb-6.pt-3
+            div.row 
+                div.col-12.col-sm-10.offset-sm-1.col-md-8.offset-md-2.col-lg-6.offset-lg-3   
+                    div.p-4.p-lg-6.bg-white.border.border-dashed   
+                        div.row.align-items-center.mb-sm-5 
+                            div.col-12.col-sm-4
+                                h1.mb-3.mb-sm-0 Вход
+                            div.col-12.col-sm-8
+                                div.mb-4.mb-sm-0.pt-sm-2
+                                    div.row
+                                        div.col-auto
+                                            div.form-check.mb-2
+                                                input#amStudent.form-check-input(data-val='true' data-val-required='Я ученик' name='studentOrTeacher' type='radio' value='student' checked)
+                                                label.form-check-label(for='amStudent') Я ученик
+                                       
+                                        div.col-auto
+                                            div.form-check.mb-2
+                                                input#amTeacher.form-check-input(data-val='true' data-val-required='Я учитель' name='studentOrTeacher' type='radio' value='teacher' )
+                                                label.form-check-label(for='amTeacher') Я учитель  
+
+
+                        section#socialLoginForm.mb-4
+                            form(action='/Account/ExternalLogin' method='post')
+                                input(name='__RequestVerificationToken' type='hidden' value='mFwswGod5_cqW6rT9sL4CuFFCkYsUSnleodK1UlLfKDkTLPIdANeTJKgjZmDMRoVF7tvLgqNp09tb1gJFZVxMx4wIf1_mzYT5WX0fVOUrKWNxqHs_ydmeeF7qhOCtmK0M2ywBTtRv7AfQK-__Baagw2')
+                                #socialLoginList
+                                p 
+                                    span.me-2 через
+                                    button#Vkontakte.btn.btn-default.border-0(type='submit' name='provider' value='Vkontakte' title='Log in using your Vkontakte account')
+                                        img(src="_Common/BaseMvcLogic/Images/icons/vk.svg", alt="")
+
+                        p.mb-3 или учетную запись       
+                        div#loginForm
+                            form(action='/Account/Login' method='post' role='form' novalidate='novalidate').mb-5
+                                input(name='__RequestVerificationToken' type='hidden' value='Rp5L9kxhvcNFbOpHJuu6cDqF3TvAfU3R492d5uMxqVu-jgL_3yrm0M0QwMdk9-WiUweUaMFnJ2KgGLfLYY_kCPufmN0Uho6KaHyKEEFCVaQ1')
+                                
+                                div.form-group
+                                    label(for='Email').label Email
+                                    input#Email.form-control.valid(data-val='true' data-val-email='The Email field is not a valid e-mail address.' data-val-required='The Email field is required.' name='Email' type='text' value='' aria-describedby='Email-error' aria-invalid='false')
+                                    span.text-danger.field-validation-valid(data-valmsg-for='Email' data-valmsg-replace='true') 1213213
+
+
+                                div.form-group
+                                    label.label(for='Password') Пароль
+                                    input#Password.form-control(data-val='true' data-val-required='The Пароль field is required.' name='Password' type='password' aria-describedby='Password-error' aria-invalid='false')       
+                                
+                                div.form-group.pt-0
+                                    div.form-check.mb-2
+                                        input#RememberMe(data-val='true' data-val-required='The Запомнить меня? field is required.' name='RememberMe' type='checkbox' value='true').form-check-input
+                                        input(name='RememberMe' type='hidden' value='false')
+                                        label.form-check-label(for='RememberMe') Запомнить меня?
+
+                                // кнопка входа
+                                div.form-group.pt-0
+                                    button.btn.btn-primary(type='submit') 
+                                        span Войти
+                                // меняется на лоудер    
+                                div.mb-5
+                                    div.btn.loading
+                                        span Загружаем аккакунт...
+    
+                            div.mb-2
+                                a(href='/Account/Register').link У меня еще нет аккаунта
+                            div
+                                a(href='/Account/ForgotPassword').link Забыли пароль?

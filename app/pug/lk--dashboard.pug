@@ -1,0 +1,86 @@
+extends ./includes/tmpl.pug
+
+block main
+    include ./includes/lk--menu.pug 
+
+    
+    main.lk-main
+        div.lk-conetnt
+            div.container 
+                div.d-flex.justify-content-between.mb-5.mt-5
+                    h1.mb-0 Мои классы 
+
+                div.alert.alert-warning(role='alert').mb-4 
+                    div.d-flex.justify-content-between 
+                        div Приближаются сроки для <a href="#" class="link">Контрольная Уравнения </a>
+
+                ul.nav.nav-tabs(role='tablist')
+                    li.nav-item(role='presentation')
+                        button#classes-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#classes-tab-pane' type='button' role='tab' aria-controls='classes-tab-pane' aria-selected='true') Активные
+                    li.nav-item(role='presentation')
+                        button#apply-tab.nav-link(data-bs-toggle='tab' data-bs-target='#apply-tab-pane' type='button' role='tab' aria-controls='apply-tab-pane' aria-selected='false') Запросы на добавление
+
+                div.tab-content
+                    // Программа
+                    #classes-tab-pane.tab-pane.fade.show.active.pt-4(role='tabpanel' aria-labelledby='classes-tab' tabindex='0')
+                        div.row.g-4 
+                            div.col-lg-6
+                                div.card.lk-class__card
+                                    a(href="lk--class.html")
+                                        div.card-header
+                                            h4.mb-0  11A, великие математики
+                                        div.card-body  
+                                            p.card-text.mb-1 Экзамен: <b>«Профильная математика, ЕГЭ 2023»</b>
+                                            p.card-text.mb-1 Программа: <b>«Для олимпиадников»</b>
+                                            p.card-text Учитель: <b>Олег Олегович</b>
+                                            p.card-text.mb-1 Даты: <b>24.09.2022-27.09.2022</b>
+                    #apply-tab-pane.tab-pane.fade.pt-4(role='tabpanel' aria-labelledby='apply-tab' tabindex='0')
+                        div.mb-5
+                            button.btn.btn-secondary
+                                span Отправить учителю запрос на&nbsp;присоединение к&nbsp;классу
+                            // появлеется после нажатияна кнопку
+                            div.row.gx-2 
+                                div.col-md-4.col-lg-4 
+                                    div.form-group
+                                        label.label Код, полученный от учителя
+                                        input.form-control.valid(data-val='true' data-val-email='' name='code' type='text' aria-describedby='code-error' aria-invalid='false')
+                                        span.text-danger.field-validation-valid(data-valmsg-for='code' data-valmsg-replace='true')   
+                                div.col-md-5.col-lg-6
+                                    div.form-group
+                                        label.label Сообщение учителю
+                                        input.form-control.valid(data-val='true' data-val-email='' name='code' type='text' aria-describedby='code-error' aria-invalid='false')
+                                        span.text-danger.field-validation-valid(data-valmsg-for='code' data-valmsg-replace='true')                                                     
+                                div.col-md-3.col-lg-2
+                                    div.form-group 
+                                        div.mt-md-4
+                                        button.btn.btn-primary.w-100
+                                            span Отправить
+                            
+                                // в случае успеха  
+                                div.alert.alert-success(role='alert') Запрос успешно отправлен. Когда учитель добавит тебя в&nbsp;класс, ссылка на этот класс появится в&nbsp;разделе «Мои классы».
+
+                        h5 Все запросы на добавление
+                        div.custom-table
+                            div.table-header.d-none.d-lg-block 
+                                div.row.pt-2
+                                    div.mb-2.col-12.col-lg Статус
+                                    div.mb-2.col-12.col-lg-4 Код учителя
+                                    div.mb-2.col-12.col-lg-5 Сообщение
+                                    
+
+                            div.table-row 
+                                div.row.pt-3 
+                                    div.mb-2.mb-lg-3.col-12.col-lg Принят / 13.12.2022                                       
+                                    div.mb-2.mb-lg-3.col-12.col-lg-4
+                                        span aKVzWuMDH02vHzHyhFtlYQ
+                                    div.mb-3.col-12.col-lg-5 «Добавьте меня, пожалуйста, я хочу учиться очень-очень.»
+                            div.table-row 
+                                div.row.pt-3 
+                                    div.mb-2.mb-lg-3.col-12.col-lg Отклонен / 13.12.2022                                       
+                                    div.mb-2.mb-lg-3.col-12.col-lg-4
+                                        span aKVzWuMDH02vHzHyhFtlYQ
+                                    div.mb-3.col-12.col-lg-5 «Добавьте меня, пожалуйста, я хочу учиться очень-очень.»                                    
+
+
+
+        include ./includes/lk--footer.pug                    

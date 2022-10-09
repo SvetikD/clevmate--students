@@ -1,0 +1,42 @@
+extends ./includes/tmpl.pug
+
+block main
+    include ./includes/lk--menu.pug 
+
+    
+    main.lk-main
+        include ./includes/lk--header.pug   
+        div.lk-conetnt
+            div.container 
+                h1.mb-7 Настройки аккаунта
+
+                div.mb-7
+                    div.row.gx-3
+                        div.col-lg-7
+                            div.form-group
+                                label(for='Name').label Имя
+                                input#Name.form-control.valid(data-val='true' data-val-email='' data-val-required='The Email field is required.' name='Name' type='text' value='Светлана Николаевна' aria-describedby='Name-error' aria-invalid='false')
+                                span.text-danger.field-validation-valid(data-valmsg-for='Name' data-valmsg-replace='true')   
+                        div.col-lg-4
+                            div.form-group
+                                div.pt-lg-4
+                                button.btn.btn-primary#liveToastBtn(type='button')
+                                    span Изменить имя
+                              
+                           
+                    div.row.mb-5
+                        div.col-lg-7
+                            div.form-group
+                                label(for='Email').label Эл. почта при регистрации
+                                input#Email.form-control.valid(disabled value="dyatko@mail.ru" data-val='true' data-val-email='' data-val-required='The Email field is required.' name='Email' type='text' aria-describedby='Name-error' aria-invalid='false')
+                                span.text-danger.field-validation-valid(data-valmsg-for='Email' data-valmsg-replace='true')    
+
+                    div.form-check.mb-2
+                        input#classRating.form-check-input(type='checkbox' value='' checked)
+                        label.form-check-label(for='classRating')
+                            | Участовать в рейтинге решенных задач
+             
+        include ./includes/lk--footer.pug 
+        include ./includes/lk--toasts.pug                            
+
+

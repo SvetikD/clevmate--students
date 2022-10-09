@@ -1,0 +1,43 @@
+aside.lk-nav 
+    a(href="lk--dashboard.html").logo 
+        span
+
+    button#toggleMenu.btn.d-lg-none(type='button' data-bs-toggle="dropdown" aria-haspopup='true' aria-expanded='false')
+
+    button(title="Уведомления" data-bs-toggle="offcanvas" data-bs-target="#currentTasks" role="button" aria-controls="currentTasks")#mobNotify.btn.d-lg-none
+        span.position-relative
+            img(src="_Common/BaseMvcLogic/Images/icons/notification.svg", alt="")
+            span.position-absolute.top-0.start-100.badge.rounded-pill.bg-danger
+                | 12
+
+
+    div.lk-menu(class="dropdown-menu" aria-labelledby="dropdownMenuButton")
+        ul.d-none.d-lg-block            
+            li(data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="ТУведомления")  
+                a(title="Уведомления" data-bs-toggle="offcanvas" href="#currentTasks" role="button" aria-controls="currentTasks").btn-tasks 
+                    
+                    span.position-relative
+                        img(src="_Common/BaseMvcLogic/Images/icons/notification.svg", alt="")
+                        span.position-absolute.top-0.start-100.badge.rounded-pill.bg-danger
+                            | 12
+                    span.title Сообщения
+
+        ul 
+            li(data-bs-toggle="tooltip" data-bs-placement="right" title="Мои классы")  
+                a(href="lk--class.html").active 
+                    img(src="_Common/BaseMvcLogic/Images/icons/apps.svg", alt="")
+                    span.title Мои классы                   
+        ul            
+            li(data-bs-toggle="tooltip" data-bs-placement="right" title="Настройки и тарифы")  
+                a(href="lk--account.html")  
+                    img(src="_Common/BaseMvcLogic/Images/icons/settings.svg", alt="")
+                    span.title Аккаунт 
+            li(data-bs-toggle="tooltip" data-bs-placement="right" title="Задать вопрос")  
+                a(href="#askUs" type='button' data-bs-toggle='modal')
+                    img(src="_Common/BaseMvcLogic/Images/icons/help.svg", alt="")
+                    span.title Задать вопрос                      
+            li(data-bs-toggle="tooltip" data-bs-placement="right" title="Выход из аккаунта")  
+                a(href="#")  
+                    img(src="_Common/BaseMvcLogic/Images/icons/logout.svg", alt="")
+                    span.title Выход                     
+                                       
