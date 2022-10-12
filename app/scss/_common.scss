@@ -67,11 +67,13 @@ p a,
         background: #fff;
         padding: 0.5em;
         border-radius: 10px;
-        border-bottom: 0;
         overflow: hidden;
         img {
             display: block;
             max-width: 300px;
+        }
+        &:hover {
+            border: 1px solid rgba(#000, 0.2);
         }
     }
 }
@@ -83,6 +85,7 @@ p a,
     border-radius: 10px;
     border-bottom: 0;
     overflow: hidden;
+    border: 1px solid rgba(#000, 0.1);
     img {
         display: block;
         max-width: 300px;
@@ -194,6 +197,10 @@ img.mfp-img {
 
 .border-dashed {
     border: 1px dashed #000;
+}
+
+.border-dashed-style {
+    border-style: dashed;
 }
 
 .bg-1 {

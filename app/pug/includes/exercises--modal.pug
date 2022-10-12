@@ -1,0 +1,42 @@
+#exercises.modal.fade(data-bs-keyboard='false' tabindex='-1' aria-hidden='true')
+    div.modal-dialog.modal-fullscreen
+        div.modal-content
+            div.container
+                div.modal-header.border-0.px-lg-5
+                    div
+                        small.text-muted Тренажер
+                        h3.modal-title Простейшие текстовые задачи (округление и величины)
+                        div.mt-2 
+                            span.d-inline-block Решено 0/4
+                            //- span.d-inline-block.my-1.me-3 Верно: <span class="badge text-bg-success">3</span>
+                            //- span.d-inline-block.my-1.me-3 С ошибками: <span class="badge bg-danger">3</span>
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+
+                div.modal-body.px-lg-5.pb-lg-5         
+                    div.pb-3
+                        div.row.border-after 
+                            div.col-lg-8
+                                p Найдите решение уравнения
+                                p
+                                    a.img-popup(href='_Common/BaseMvcLogic/Images/img-test.svg')
+                                        img(src='_Common/BaseMvcLogic/Images/img-test.svg' alt='') 
+                                p Установите соответствие между величинами и их возможными значениями: к каждому элементу первого столбца подберите соответствующий элемент из второго столбца.
+
+                                p Запишите в ответ цифры, расположив их в порядке, соответствующем буквам, без пробелов, запятых и других дополнительных символов
+                        
+                        div.bg-light.px-2.py-3.mt-3.mb-2
+                            div.row.gx-3
+                                div.col-7.col-lg-4
+                                    input.form-control.valid(name='Answer' type='text')
+                                            
+                                div.col-5.col-lg-4
+                                    button.btn.btn-secondary#liveToastBtn(type='button')
+                                        span Ответить
+
+                        div.alert.alert-warning 
+                            p Задача решена неверно    
+                            button.btn.btn-primary(type='button')
+                                span К следующей задаче             
+
+                                           
+                                                        

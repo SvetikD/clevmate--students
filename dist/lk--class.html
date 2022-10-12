@@ -53,28 +53,115 @@
               <div class="mb-2">
                 <h1 class="d-inline mb-0">11A, великие математики </h1>
               </div>
-              <p> <span class="my-1 me-4">Программа: «70-80 баллов»</span><span class="my-1 me-4">Учитель: Олег Денисович</span><span class="my-1 me-4">Дата окончания: 12.04.2022</span></p>
+              <p> <span class="my-1 me-4">Учитель: Олег Денисович</span><span class="my-1 me-4">Дата окончания: 12.04.2022</span><span class="d-inline-flex align-items-center my-1 me-4" type="button" data-bs-toggle="modal" data-bs-target="#life-info"> <span class="me-1">Жизни: <b>3</b> </span><img src="_Common/BaseMvcLogic/Images/icons/question_mark.svg" alt="" style="margin-top: -2px;"></span></p>
             </div>
             <ul class="nav nav-tabs" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="studies-tab" data-bs-toggle="tab" data-bs-target="#studies-tab-pane" type="button" role="tab" aria-controls="studies-tab-pane" aria-selected="true">Программа              </button>
+                <button class="nav-link active" id="studies-tab" data-bs-toggle="tab" data-bs-target="#studies-tab-pane" type="button" role="tab" aria-controls="studies-tab-pane" aria-selected="true">Программа</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tests-tab" data-bs-toggle="tab" data-bs-target="#tests-tab-pane" type="button" role="tab" aria-controls="tests-tab-pane" aria-selected="true">Контрольные</button>
               </li>
               <li class="nav-item" role="presentation">
                 <button class="nav-link" id="simulator-tab" data-bs-toggle="tab" data-bs-target="#simulator-tab-pane" type="button" role="tab" aria-controls="simulator-tab-pane" aria-selected="false">Тренажёр</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="chat-tab" data-bs-toggle="tab" data-bs-target="#chat-tab-pane" type="button" role="tab" aria-controls="chat-tab-pane" aria-selected="false">Сообщения учителю                      </button>
+                <button class="nav-link" id="chat-tab" data-bs-toggle="tab" data-bs-target="#chat-tab-pane" type="button" role="tab" aria-controls="chat-tab-pane" aria-selected="false">Чат с учителем <small class="badge rounded-pill bg-info">2   </small></button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="students-tab" data-bs-toggle="tab" data-bs-target="#students-tab-pane" type="button" role="tab" aria-controls="students-tab-pane" aria-selected="false">Рейтинг класса</button>
+                <button class="nav-link" id="exercisess-tab" data-bs-toggle="tab" data-bs-target="#exercisess-tab-pane" type="button" role="tab" aria-controls="students-tab-pane" aria-selected="false">Рейтинг класса</button>
               </li>
             </ul>
             <div class="tab-content">
+              <!-- тренажёр-->
+              <div class="tab-pane fade pt-4" id="simulator-tab-pane" role="tabpanel" aria-labelledby="simulator-tab" tabindex="0">
+                <h4>Дополнительные задачи</h4>
+                <p class="mb-2">Решай задачи, чтобы закрепить темы и получить дополнительные жизни.</p>
+                <p> <span class="me-3">Всего  <span class="d-lg-none">Решено:</span> <b>0/0</b>  </span><span class="me-3">До новой жизни осталось: <b>20</b></span></p>
+                <div class="custom-table mt-4">
+                  <div class="table-header d-none d-lg-block"> 
+                    <div class="row pt-2">                                     
+                      <div class="mb-2 col-12 col-lg-1 col-num">#</div>
+                      <div class="mb-2 col-lg-8">Тема</div>
+                      <div class="mb-2 col-4 col-lg"> Решено задач</div>
+                    </div>
+                  </div>
+                  <div class="table-row with-hover" type="button" data-bs-toggle="modal" data-bs-target="#exercises">
+                    <div class="row pt-3">                                       
+                      <div class="mb-2 col-12 col-lg-1 col-num"> <b><span class="d-lg-none">#</span>1</b></div>
+                      <div class="mb-2 col-lg-8">Простейшие текстовые задачи (округление и&nbsp;величины)</div>
+                      <div class="mb-3 col-4 col-lg"> <span class="d-lg-none">Решено:</span> 0</div>
+                    </div>
+                  </div>
+                  <div class="table-row with-hover" type="button" data-bs-toggle="modal" data-bs-target="#exercises">
+                    <div class="row pt-3">                                       
+                      <div class="mb-2 col-12 col-lg-1 col-num"> <b><span class="d-lg-none">#</span>2</b></div>
+                      <div class="mb-2 col-lg-8">Размеры и единицы измерения</div>
+                      <div class="mb-3 col-4 col-lg"> <span class="d-lg-none">Решено:</span> 0</div>
+                    </div>
+                  </div>
+                  <div class="table-row with-hover" type="button" data-bs-toggle="modal" data-bs-target="#exercises">
+                    <div class="row pt-3">                                       
+                      <div class="mb-2 col-12 col-lg-1 col-num"> <b><span class="d-lg-none">#</span>3</b></div>
+                      <div class="mb-2 col-lg-8">Чтение графиков и диаграмм</div>
+                      <div class="mb-3 col-4 col-lg"> <span class="d-lg-none">Решено:</span> 0</div>
+                    </div>
+                  </div>
+                  <div class="table-row with-hover" type="button" data-bs-toggle="modal" data-bs-target="#exercises">
+                    <div class="row pt-3">                                       
+                      <div class="mb-2 col-12 col-lg-1 col-num"> <b><span class="d-lg-none">#</span>4</b></div>
+                      <div class="mb-2 col-lg-8">Действия с формулами</div>
+                      <div class="mb-3 col-4 col-lg"> <span class="d-lg-none">Решено:</span> 0</div>
+                    </div>
+                  </div>
+                  <div class="table-row with-hover" type="button" data-bs-toggle="modal" data-bs-target="#exercises">
+                    <div class="row pt-3">                                       
+                      <div class="mb-2 col-12 col-lg-1 col-num"> <b><span class="d-lg-none">#</span>5</b></div>
+                      <div class="mb-2 col-lg-8">Теория вероятностей</div>
+                      <div class="mb-3 col-4 col-lg"> <span class="d-lg-none">Решено:</span> 0</div>
+                    </div>
+                  </div>
+                  <div class="table-row with-hover" type="button" data-bs-toggle="modal" data-bs-target="#exercises">
+                    <div class="row pt-3">                                       
+                      <div class="mb-2 col-12 col-lg-1 col-num"> <b><span class="d-lg-none">#</span>6</b></div>
+                      <div class="mb-2 col-lg-8">Выбор оптимального варианта</div>
+                      <div class="mb-3 col-4 col-lg"> <span class="d-lg-none">Решено:</span> 0</div>
+                    </div>
+                  </div>
+                  <div class="table-row with-hover" type="button" data-bs-toggle="modal" data-bs-target="#exercises">
+                    <div class="row pt-3">                                       
+                      <div class="mb-2 col-12 col-lg-1 col-num"> <b><span class="d-lg-none">#</span>7</b></div>
+                      <div class="mb-2 col-lg-8">Анализ графиков и диаграмм</div>
+                      <div class="mb-3 col-4 col-lg"> <span class="d-lg-none">Решено:</span> 0</div>
+                    </div>
+                  </div>
+                  <div class="table-row with-hover" type="button" data-bs-toggle="modal" data-bs-target="#exercises">
+                    <div class="row pt-3">                                       
+                      <div class="mb-2 col-12 col-lg-1 col-num"> <b><span class="d-lg-none">#</span>8</b></div>
+                      <div class="mb-2 col-lg-8">Анализ утверждений</div>
+                      <div class="mb-3 col-4 col-lg"> <span class="d-lg-none">Решено:</span> 0</div>
+                    </div>
+                  </div>
+                  <div class="table-row with-hover" type="button" data-bs-toggle="modal" data-bs-target="#exercises">
+                    <div class="row pt-3">                                       
+                      <div class="mb-2 col-12 col-lg-1 col-num"> <b><span class="d-lg-none">#</span>9</b></div>
+                      <div class="mb-2 col-lg-8">Задачи на квадратной решетке</div>
+                      <div class="mb-3 col-4 col-lg"> <span class="d-lg-none">Решено:</span> 0</div>
+                    </div>
+                  </div>
+                  <div class="table-row with-hover" type="button" data-bs-toggle="modal" data-bs-target="#exercises">
+                    <div class="row pt-3">                                       
+                      <div class="mb-2 col-12 col-lg-1 col-num"> <b><span class="d-lg-none">#</span>10</b></div>
+                      <div class="mb-2 col-lg-8">Прикладная геометрия</div>
+                      <div class="mb-3 col-4 col-lg"> <span class="d-lg-none">Решено:</span> 0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <!-- Сообщения учителю-->
               <div class="tab-pane fade pt-4" id="chat-tab-pane" role="tabpanel" aria-labelledby="chat-tab" tabindex="0">
                 <div class="row"> 
-                  <div class="col-lg-5 pe-lg-6 pt-lg-2">
-                    <!-- форма-->
+                  <div class="col-lg-5 pe-lg-6">
                     <div class="cb-message-form p-3">
                       <div class="form-group pt-lg-2"> 
                         <label class="label">Текст сообщения</label>
@@ -87,14 +174,14 @@
                       <div class="files-list mt-2">
                         <div class="row gx-2 align-items-center">
                           <div class="col text-truncate"> <span>some-file.pdf</span></div>
-                          <di class="col-auto">
-                            <button class="btn btn-sm btn-icon btn-del border-0 h-auto p-1" type="button" data-bs-toggle="modal" data-bs-target="#student-delete"><img src="_Common/BaseMvcLogic/Images/icons/off.svg" alt=""></button>
-                          </di>
+                          <div class="col-auto"> 
+                            <button class="btn btn-sm btn-icon btn-del border-0 h-auto p-1" type="button" data-bs-toggle="modal" data-bs-target="#exercises-delete"><img src="_Common/BaseMvcLogic/Images/icons/off.svg" alt=""></button>
+                          </div>
                         </div>
                         <div class="row gx-2 align-items-center">
                           <div class="col text-truncate"> <span>some-file-with-very-very-very-very-very-long-name.pdf</span></div>
                           <div class="col-auto"> 
-                            <button class="btn btn-sm btn-icon btn-del border-0 h-auto p-1" type="button" data-bs-toggle="modal" data-bs-target="#student-delete"><img src="_Common/BaseMvcLogic/Images/icons/off.svg" alt=""></button>
+                            <button class="btn btn-sm btn-icon btn-del border-0 h-auto p-1" type="button" data-bs-toggle="modal" data-bs-target="#exercises-delete"><img src="_Common/BaseMvcLogic/Images/icons/off.svg" alt=""></button>
                           </div>
                         </div>
                       </div>
@@ -102,51 +189,53 @@
                     </div>
                   </div>
                   <div class="col-lg-7">
-                    <div class="cb-message-table mt-5 mt-lg-0">
-                      <table class="table">
-                        <tbody>
-                          <tr>
-                            <td> <small>29.08.2022 </small><small class="text-muted"> 16:03</small></td>
-                            <td> 
-                              <p>Дополнительная задача к теме "Вычисления и преобразования, простейшие уравнения, текстовые задачи". Посмотрите оформление.</p>
-                              <p> <a href="#">Пример оформлния.jpg</a></p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td> <small>29.08.2022 </small><small class="text-muted">16:03</small></td>
-                            <td> 
-                              <p>Дополнительная задача к теме "Вычисления и преобразования, простейшие уравнения, текстовые задачи". Посмотрите оформление.</p>
-                              <p> <a href="#">Пример оформлния.jpg</a></p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td> <small>29.08.2022 </small><small class="text-muted">16:03</small></td>
-                            <td> 
-                              <p>Всем учиться!!!                                                       </p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td> <small>29.08.2022 </small><small class="text-muted">16:03</small></td>
-                            <td> 
-                              <p>Дополнительная задача к теме "Вычисления и преобразования, простейшие уравнения, текстовые задачи". Посмотрите оформление.</p>
-                              <p> <a href="#">Пример оформлния.jpg</a></p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td> <small>29.08.2022 </small><small class="text-muted">16:03</small></td>
-                            <td> 
-                              <p>Дополнительная задача к теме "Вычисления и преобразования, простейшие уравнения, текстовые задачи". Посмотрите оформление.</p>
-                              <p> <a href="#">Пример оформлния.jpg</a></p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <div class="lk-chat mt-5 mt-lg-0">
+                      <div class="chat-history">
+                        <ul class="m-b-0">
+                          <li class="clearfix">
+                            <div class="message-data text-end"><span class="message-data-time">11:50, Сегодня </span></div>
+                            <div class="message float-end">
+                              <p>Задача решена верно, но обрати внимание на запись. В приложении правки по форме записи.</p>
+                              <div class="message-files">Файлы: <a class="link" href="#">345.png</a></div>
+                            </div>
+                          </li>
+                          <li class="clearfix">
+                            <div class="message-data"><small class="badge bg-secondary me-2">Для всего класса </small><span class="message-data-time">10:10, 29.08.2022</span></div>
+                            <div class="message">
+                              <p>Добрый день. Отправляю файлы на проверку.</p>
+                              <div class="message-files">Файлы: <a class="link" href="#">345.png</a></div>
+                            </div>
+                          </li>
+                          <li class="clearfix">
+                            <div class="message-data"><span class="message-data-time">10:10, 29.08.2022</span></div>
+                            <div class="message">
+                              <p>Добрый день. Отправляю файлы на проверку.</p>
+                              <div class="message-files">Файлы: <a class="link" href="#">345.png</a></div>
+                            </div>
+                          </li>
+                          <li class="clearfix">
+                            <div class="message-data text-end"><span class="message-data-time">11:50, Сегодня </span></div>
+                            <div class="message float-end">
+                              <p>Задача решена верно, но обрати внимание на запись. В приложении правки по форме записи.</p>
+                            </div>
+                          </li>
+                          <li class="clearfix">
+                            <div class="message-data"><small class="badge bg-info me-2">Учитель </small><span class="message-data-time">10:10, 29.08.2022</span></div>
+                            <div class="message">
+                              <p>Добрый день. Отправляю файлы на проверку.</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="text-center"> 
+                      <button class="btn btn-sm btn-secondary">Показать предыдущие сообщения</button>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- Ученики-->
-              <div class="tab-pane fade pt-4" id="students-tab-pane" role="tabpanel" aria-labelledby="students-tab" tabindex="0">
+              <div class="tab-pane fade pt-4" id="exercisess-tab-pane" role="tabpanel" aria-labelledby="students-tab" tabindex="0">
                 <p>Рейтинг учеников на <b>12.09.2022</b></p>
                 <div class="custom-table lk-student-list">
                   <div class="table-header d-none d-lg-block"> 
@@ -192,6 +281,60 @@
             </div>
           </div>
         </footer>
+        <div class="modal fade" id="life-info" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="confirmaActivation" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Что такое жизни?</h4>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Тут описание, что это и зачем нужно...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exercises" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="container">
+                <div class="modal-header border-0 px-lg-5">
+                  <div><small class="text-muted">Тренажер</small>
+                    <h3 class="modal-title">Простейшие текстовые задачи (округление и величины)</h3>
+                    <div class="mt-2"> <span class="d-inline-block">Решено 0/4</span></div>
+                  </div>
+                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-lg-5 pb-lg-5">        
+                  <div class="pb-3">
+                    <div class="row border-after"> 
+                      <div class="col-lg-8">
+                        <p>Найдите решение уравнения</p>
+                        <p><a class="img-popup" href="_Common/BaseMvcLogic/Images/img-test.svg"><img src="_Common/BaseMvcLogic/Images/img-test.svg" alt=""></a></p>
+                        <p>Установите соответствие между величинами и их возможными значениями: к каждому элементу первого столбца подберите соответствующий элемент из второго столбца.</p>
+                        <p>Запишите в ответ цифры, расположив их в порядке, соответствующем буквам, без пробелов, запятых и других дополнительных символов</p>
+                      </div>
+                    </div>
+                    <div class="bg-light px-2 py-3 mt-3 mb-2">
+                      <div class="row gx-3">
+                        <div class="col-7 col-lg-4">
+                          <input class="form-control valid" name="Answer" type="text">
+                        </div>
+                        <div class="col-5 col-lg-4">
+                          <button class="btn btn-secondary" id="liveToastBtn" type="button"><span>Ответить</span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-warning"> 
+                      <p>Задача решена неверно    </p>
+                      <button class="btn btn-primary" type="button"><span>К следующей задаче             </span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <div class="offcanvas offcanvas-start lk-curtask" id="currentTasks" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" aria-labelledby="offcanvasScrollingLabel">
         <div class="offcanvas-header">
