@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 
 
 gulp.task('scss', function(){
-  return gulp.src(['app/scss/styles.scss', 'app/scss/print.scss'])
+  return gulp.src(['app/scss/styles-students.scss', 'app/scss/print.scss'])
     .pipe(sourcemaps.init())
     .pipe(wait(1500))
     .pipe(sass({outputStyle: 'compressed', includePaths: ['node_modules']}))

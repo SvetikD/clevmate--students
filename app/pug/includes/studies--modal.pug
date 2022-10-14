@@ -1,0 +1,46 @@
+#studies-tasks.modal.fade(data-bs-keyboard='false' tabindex='-1' aria-hidden='true')
+    div.modal-dialog.modal-fullscreen
+        div.modal-content
+            div.container
+                div.modal-header.border-0.px-0.px-lg-5
+                    div
+                        small.text-muted Тема
+                        h3.modal-title Простейшие текстовые задачи (округление и величины)
+                        div.mt-2 
+                            span.d-inline-block.my-1.me-3 Задач в теме: 11
+                            span.d-inline-block.my-1.me-3 Нужно решить минимум: 9
+                        div.mt-2 
+                            span.d-inline-block.my-1.me-1 Решено
+                            span.d-inline-block.my-1.me-3 верно <span class="badge text-bg-success">3</span>
+                            span.d-inline-block.my-1.me-1 с ошибками: <span class="badge bg-danger">3</span>                            
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                div.px-lg-5
+                    hr
+                div.modal-body.px-0.px-lg-5.pb-lg-5        
+                    div.pb-3
+                        div.row
+                            div.col-lg-8
+                                p Найдите решение уравнения
+                                p
+                                    a.img-popup(href='_Common/BaseMvcLogic/Images/img-test.svg')
+                                        img(src='_Common/BaseMvcLogic/Images/img-test.svg' alt='') 
+                                p Установите соответствие между величинами и их возможными значениями: к каждому элементу первого столбца подберите соответствующий элемент из второго столбца.
+
+                                p Запишите в ответ цифры, расположив их в порядке, соответствующем буквам, без пробелов, запятых и других дополнительных символов
+                        
+                        div.bg-light.px-2.py-3.mt-3.mb-2
+                            p.small Это задача стребует подробного ответа. Напишите решение на... и загрузите файл в формате pdf, jpg или png, не более 4 MB.
+                            div.row.gx-3
+                                div.col-7.col-lg-4
+                                    .form-group.mb-0
+                                        input.form-control(type='file' accept='image/*, application/pdf')
+                                div.col-5.col-lg-4
+                                    button.btn.btn-secondary#liveToastBtn(type='button')
+                                        span Ответить
+
+                        div.alert.alert-warning   
+                            button.btn.btn-primary(type='button')
+                                span К следующей задаче             
+
+                                           
+                                                        

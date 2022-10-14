@@ -34,6 +34,93 @@ block main
                         button#exercisess-tab.nav-link(data-bs-toggle='tab' data-bs-target='#exercisess-tab-pane' type='button' role='tab' aria-controls='students-tab-pane' aria-selected='false') Рейтинг класса
 
                 div.tab-content
+                    // программа 
+                    #studies-tab-pane.tab-pane.fade.show.active.pt-3(role='tabpanel' aria-labelledby='studies-tab' tabindex='0')
+                        
+                        div.custom-table.mt-4
+                            div.bg-1.p-3
+                                h5.mb-0 Модуль 1. Название модуля
+                            div.table-row.with-hover(type='button' data-bs-toggle="modal" data-bs-target="#studies-tasks")
+                                div.row.pt-3                                        
+                                    div.mb-2.col-12.col-lg-1.col-num 
+                                        b <span class="d-lg-none">#</span>1
+                                    div.mb-2.col-lg-7 Простейшие текстовые задачи (округление и&nbsp;величины)
+                                    div.mb-2.col-5.col-lg-2 
+                                        div до 12.23.2022
+                                    div.mb-3.col-4.col-lg  
+                                        div.badge.text-bg-light Завершено
+                            div.table-row.with-hover(type='button' data-bs-toggle="modal" data-bs-target="#studies-tasks")
+                                div.row.pt-3                                        
+                                    div.mb-2.col-12.col-lg-1.col-num 
+                                        b <span class="d-lg-none">#</span>2
+                                    div.mb-2.col-lg-7 Простейшие текстовые задачи (округление и&nbsp;величины)
+                                    div.mb-2.col-5.col-lg-2 
+                                        div до 12.23.2022
+                                    div.mb-3.col-4.col-lg  
+                                        div.badge.text-bg-warning Работа над ошибками
+                        div.custom-table.mt-4
+                            div.bg-2.p-3
+                                h5.mb-0 Модуль 2. Название модуля
+                            div.table-row.with-hover(type='button' data-bs-toggle="modal" data-bs-target="#studies-tasks")
+                                div.row.pt-3                                        
+                                    div.mb-2.col-12.col-lg-1.col-num 
+                                        b <span class="d-lg-none">#</span>1
+                                    div.mb-2.col-lg-7 Простейшие текстовые задачи (округление и&nbsp;величины)
+                                    div.mb-2.col-5.col-lg-2 
+                                        div до 12.23.2022
+                                    div.mb-3.col-4.col-lg  
+                                        div.badge.text-bg-success В работе
+                            div.table-row.text-muted
+                                div.row.pt-3                                        
+                                    div.mb-2.col-12.col-lg-1.col-num 
+                                        b <span class="d-lg-none">#</span>2
+                                    div.mb-2.col-lg-7 Простейшие текстовые задачи (округление и&nbsp;величины)
+                                    div.mb-2.col-5.col-lg-2 
+                                        div до 12.23.2022
+                                    div.mb-3.col-4.col-lg &nbsp;
+                                                          
+                        div.custom-table.mt-4
+                            div.bg-3.p-3
+                                h5.mb-0 Модуль 3. Название модуля
+                            div.table-row.text-muted
+                                div.row.pt-3                                        
+                                    div.mb-2.col-12.col-lg-1.col-num 
+                                        b <span class="d-lg-none">#</span>1
+                                    div.mb-2.col-lg-7 Простейшие текстовые задачи (округление и&nbsp;величины)
+                                    div.mb-2.col-5.col-lg-2 
+                                        div до 12.23.2022
+                                    div.mb-3.col-4.col-lg &nbsp;
+                                        
+                            div.table-row.text-muted
+                                div.row.pt-3                                        
+                                    div.mb-2.col-12.col-lg-1.col-num 
+                                        b <span class="d-lg-none">#</span>2
+                                    div.mb-2.col-lg-7 Простейшие текстовые задачи (округление и&nbsp;величины)
+                                    div.mb-2.col-5.col-lg-2 
+                                        div до 12.23.2022
+                                    div.mb-3.col-4.col-lg &nbsp;
+                                                             
+                        div.custom-table.mt-4
+                            div.bg-4.p-3
+                                h5.mb-0 Модуль 4. Название модуля
+                            div.table-row.text-muted
+                                div.row.pt-3                                        
+                                    div.mb-2.col-12.col-lg-1.col-num 
+                                        b <span class="d-lg-none">#</span>1
+                                    div.mb-2.col-lg-7 Простейшие текстовые задачи (округление и&nbsp;величины)
+                                    div.mb-2.col-5.col-lg-2 
+                                        div до 12.23.2022
+                                    div.mb-3.col-4.col-lg &nbsp;
+                                        
+                            div.table-row.text-muted
+                                div.row.pt-3                                        
+                                    div.mb-2.col-12.col-lg-1.col-num 
+                                        b <span class="d-lg-none">#</span>2
+                                    div.mb-2.col-lg-7 Простейшие текстовые задачи (округление и&nbsp;величины)
+                                    div.mb-2.col-5.col-lg-2 
+                                        div до 12.23.2022
+                                    div.mb-3.col-4.col-lg &nbsp;
+                                                            
                     // тренажёр
                     #simulator-tab-pane.tab-pane.fade.pt-4(role='tabpanel' aria-labelledby='simulator-tab' tabindex='0')
                         h4 Дополнительные задачи
@@ -219,3 +306,4 @@ block main
 
         include ./includes/life-info--modal.pug 
         include ./includes/exercises--modal.pug 
+        include ./includes/studies--modal.pug 
