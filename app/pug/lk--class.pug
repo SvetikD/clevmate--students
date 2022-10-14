@@ -127,7 +127,71 @@ block main
                                     div.mb-2.col-5.col-lg-2 
                                         div до 12.23.2022
                                     div.mb-3.col-4.col-lg &nbsp;
-                                                            
+
+                    // контрольные 
+                    #tests-tab-pane.tab-pane.fade.pt-4(role='tabpanel' aria-labelledby='tests-tab' tabindex='0')
+                        div.custom-table
+                            div.table-row
+                                div.row.pt-3  
+                                    div.col-lg-5.pb-3 
+                                        b Название кнонтрольной какое-то такое вот
+                                        div 
+                                            small.text-muted.me-2 12.12.2022 11:00 
+                                            span.badge.bg-success Решено   
+                                    div.col-lg-5.pb-3 
+                                        div.row  
+                                            div.col-auto
+                                                div.d-flex.align-items-center
+                                                    img(src='_Common/BaseMvcLogic/Images/icons/create.svg' alt='').me-2
+                                                    b 9/10                  
+                                            div.col-auto
+                                                div.d-flex.align-items-center
+                                                    img(src='_Common/BaseMvcLogic/Images/icons/clock.svg' alt='').me-2
+                                                    b за 53 мин.
+                                    div.col-lg-2.pb-3  
+                                        button.btn.btn-sm.btn-primary.w-100(type='button' data-bs-toggle="modal" data-bs-target="#studies-tasks") Посмотреть
+                            div.table-row
+                                div.row.pt-3  
+                                    div.col-lg-5.pb-3 
+                                        b Название кнонтрольной какое-то такое вот
+                                        div 
+                                            small.text-muted.me-2 12.12.2022 11:00 
+                                            span.badge.bg-danger Много ошибок  
+                                    div.col-lg-5.pb-3
+                                        div.row  
+                                            div.col-auto
+                                                div.d-flex.align-items-center
+                                                    img(src='_Common/BaseMvcLogic/Images/icons/create.svg' alt='').me-2
+                                                    b 2/10                                  
+                                            div.col-auto
+                                                div.d-flex.align-items-center
+                                                    img(src='_Common/BaseMvcLogic/Images/icons/clock.svg' alt='').me-2
+                                                    b за 40 мин.
+                                    div.col-lg-2.pb-3 
+                                        button.btn.btn-sm.btn-primary.w-100(type='button' data-bs-toggle="modal" data-bs-target="#studies-tasks") Посмотреть                  
+                            div.table-row
+                                div.row.pt-3  
+                                    div.col-lg-5.pb-3 
+                                        b Название кнонтрольной какое-то такое вот
+                                        div 
+                                            small.text-muted.me-2 12.12.2022 11:00   
+                                    div.col-lg-5.pb-3
+                                        div.row  
+                                            div.col-auto
+                                                div.d-flex.align-items-center
+                                                    img(src='_Common/BaseMvcLogic/Images/icons/create.svg' alt='').me-2
+                                                    b 10                                                                          
+                                            div.col-auto
+                                                div.d-flex.align-items-center
+                                                    img(src='_Common/BaseMvcLogic/Images/icons/clock.svg' alt='').me-2
+                                                    b 60 мин.
+                                            div.col-auto
+                                                div.d-flex.align-items-center
+                                                    img(src='_Common/BaseMvcLogic/Images/icons/date.svg' alt='').me-2
+                                                    b до 02.09.2022
+                                    div.col-lg-2.pb-3 
+                                        button.btn.btn-sm.btn-secondary.w-100 Начать 
+
                     // тренажёр
                     #simulator-tab-pane.tab-pane.fade.pt-4(role='tabpanel' aria-labelledby='simulator-tab' tabindex='0')
                         h4 Дополнительные задачи
@@ -202,7 +266,6 @@ block main
                                         b <span class="d-lg-none">#</span>10
                                     div.mb-2.col-lg-8 Прикладная геометрия
                                     div.mb-3.col-4.col-lg  <span class="d-lg-none">Решено:</span> 0
-
 
                     // Сообщения учителю
                     #chat-tab-pane.tab-pane.fade.pt-4(role='tabpanel' aria-labelledby='chat-tab' tabindex='0')
