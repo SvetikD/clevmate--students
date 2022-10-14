@@ -149,7 +149,7 @@ block main
                                                     img(src='_Common/BaseMvcLogic/Images/icons/clock.svg' alt='').me-2
                                                     b за 53 мин.
                                     div.col-lg-2.pb-3  
-                                        button.btn.btn-sm.btn-primary.w-100(type='button' data-bs-toggle="modal" data-bs-target="#studies-tasks") Посмотреть
+                                        button.btn.btn-sm.btn-primary.w-100(type='button' data-bs-toggle="modal" data-bs-target="#test-tasks") Посмотреть
                             div.table-row
                                 div.row.pt-3  
                                     div.col-lg-5.pb-3 
@@ -168,7 +168,7 @@ block main
                                                     img(src='_Common/BaseMvcLogic/Images/icons/clock.svg' alt='').me-2
                                                     b за 40 мин.
                                     div.col-lg-2.pb-3 
-                                        button.btn.btn-sm.btn-primary.w-100(type='button' data-bs-toggle="modal" data-bs-target="#studies-tasks") Посмотреть                  
+                                        button.btn.btn-sm.btn-primary.w-100(type='button' data-bs-toggle="modal" data-bs-target="#test-tasks") Посмотреть                  
                             div.table-row
                                 div.row.pt-3  
                                     div.col-lg-5.pb-3 
@@ -190,7 +190,7 @@ block main
                                                     img(src='_Common/BaseMvcLogic/Images/icons/date.svg' alt='').me-2
                                                     b до 02.09.2022
                                     div.col-lg-2.pb-3 
-                                        button.btn.btn-sm.btn-secondary.w-100 Начать 
+                                        button.btn.btn-sm.btn-secondary.w-100(type='button' data-bs-toggle="modal" data-bs-target="#test-tasks") Начать 
 
                     // тренажёр
                     #simulator-tab-pane.tab-pane.fade.pt-4(role='tabpanel' aria-labelledby='simulator-tab' tabindex='0')
@@ -376,5 +376,6 @@ block main
 
         include ./includes/life-info--modal.pug 
         include ./includes/exercises--modal.pug 
-        include ./includes/studies--modal.pug 
+        include ./includes/studies--modal.pug
+        include ./includes/test--modal.pug 
         include ./includes/error--modal.pug 
