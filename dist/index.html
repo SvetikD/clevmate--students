@@ -27,7 +27,7 @@
             <li data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="ТУведомления"> <a class="btn-tasks" title="Уведомления" data-bs-toggle="offcanvas" href="#currentTasks" role="button" aria-controls="currentTasks"> <span class="position-relative"><img src="_Common/BaseMvcLogic/Images/icons/notification.svg" alt=""><span class="position-absolute top-0 start-100 badge rounded-pill bg-danger">12</span></span><span class="title">Сообщения</span></a></li>
           </ul>
           <ul> 
-            <li data-bs-toggle="tooltip" data-bs-placement="right" title="Мои классы"> <a class="active" href="lk--class.html"> <img src="_Common/BaseMvcLogic/Images/icons/apps.svg" alt=""><span class="title">Мои классы                   </span></a></li>
+            <li data-bs-toggle="tooltip" data-bs-placement="right" title="Мои классы"> <a class="active" href="lk--dashboard.html"> <img src="_Common/BaseMvcLogic/Images/icons/apps.svg" alt=""><span class="title">Мои классы                   </span></a></li>
           </ul>
           <ul>           
             <li data-bs-toggle="tooltip" data-bs-placement="right" title="Настройки и тарифы"> <a href="lk--account.html"> <img src="_Common/BaseMvcLogic/Images/icons/settings.svg" alt=""><span class="title">Аккаунт </span></a></li>
@@ -39,11 +39,12 @@
       <main class="lk-main">
         <div class="lk-conetnt">
           <div class="container py-5"> 
-            <h2 class="mb-4">Список страниц админки учителя</h2>
+            <h2 class="mb-4">Список страниц админки ученика</h2>
             <ol class="mb-6"> 
               <li class="mb-2"> <a href="lk--dashboard.html">Дашборд ученика -- <small class="badge bg-success">можно брать</small></a></li>
-              <li class="mb-2"> <a href="lk--class.html">Класс -- в процессе</a></li>
+              <li class="mb-2"> <a href="lk--class.html">Класс       </a></li>
               <li class="mb-2"> <a href="lk--account.html">Настройки аккаунта  -- <small class="badge bg-success">можно брать</small></a></li>
+              <li class="mb-2"> <a href="#img-popup" data-bs-toggle="modal" data-bs-target="#img-popup">Пример попапа с картинкой </a></li>
             </ol>
             <h2 class="mb-4">Техничкские страницы</h2>
             <ol> 
@@ -69,6 +70,18 @@
             </div>
           </div>
         </footer>
+        <div class="modal modal-img fade" id="img-popup" data-bs-keyboard="false" tabindex="-1" aria-labelledby="confirmaActivation" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">  
+                <figure><img src="_Common/BaseMvcLogic/Images/img-test.jpg" alt=""></figure>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <div class="offcanvas offcanvas-start lk-curtask" id="currentTasks" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" aria-labelledby="offcanvasScrollingLabel">
         <div class="offcanvas-header">

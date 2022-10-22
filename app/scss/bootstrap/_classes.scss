@@ -500,6 +500,21 @@ small, .small {
     min-height: 100%;
 }
 
+// модалка с картинкой
+.modal-img {
+    text-align: center;
+    .modal-dialog {
+        max-width: none;
+        width: auto;
+        display: inline-block;
+        text-align: left;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
 .accordion-button:focus {
 
     &:focus {

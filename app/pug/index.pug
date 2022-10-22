@@ -7,28 +7,16 @@ block main
     main.lk-main
         div.lk-conetnt
             div.container.py-5 
-                h2.mb-4 Список страниц админки учителя
+                h2.mb-4 Список страниц админки ученика
                 ol.mb-6 
                     li.mb-2 
                         a(href="lk--dashboard.html") Дашборд ученика -- <small class="badge bg-success">можно брать</small>
                     li.mb-2  
-                         a(href="lk--class.html") Класс -- в процессе
-                    //- li.mb-2  
-                    //-     a(href="lk--class--creating.html") Классы -- Создание нового класса (Шаг-1) -- <small class="badge bg-success">можно брать</small>
-                    //- li.mb-2  
-                    //-     a(href="lk--class--not-active.html") Классы -- Не активный (Шаг-2) -- <small class="badge bg-success">можно брать</small> 
-                    //- li.mb-2  
-                    //-     a(href="lk--class--active.html") Классы -- Aктивный (Шаг-3)  
-                    //- li.mb-2  
-                    //-     a(href="lk--program.html") Программы -- <small class="badge bg-success">можно брать</small>         
-                    //- li.mb-2  
-                    //-     a(href="lk--program--creating-step-1.html") Программы -- Создание (Шаг-1) -- <small class="badge bg-success">можно брать</small> 
-                    //- li.mb-2  
-                    //-     a(href="lk--program--creating-step-2.html") Программы -- Создание (Шаг-2) -- <small class="badge bg-success">можно брать</small>                                                                            
-                    //- li.mb-2  
-                    //-     a(href="lk--students.html") Ученики -- <small class="badge bg-success">можно брать</small>      
+                         a(href="lk--class.html") Класс       
                     li.mb-2  
                         a(href="lk--account.html") Настройки аккаунта  -- <small class="badge bg-success">можно брать</small>
+                    li.mb-2  
+                        a(href="#img-popup" data-bs-toggle="modal" data-bs-target="#img-popup") Пример попапа с картинкой 
 
                 h2.mb-4 Техничкские страницы
                 ol 
@@ -46,3 +34,4 @@ block main
                         a(href="tp--forget.html") Забыли пароль  -- <small class="badge bg-success">можно брать</small>                  
 
         include ./includes/lk--footer.pug   
+        include ./includes/img-popup.pug  
